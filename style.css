@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+.section{
+    width: 100%;
+    height: 100vh;
+    background-color: #ecf0f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffff;
+    width: 40rem;
+    height: 60rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.form{
+    margin-top: 5rem;
+    
+}
+.form input{
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    padding: 1rem 2rem;
+    color: #97a7c3;
+    font-size: 2rem;
+    font-weight: bold;
+    
+}
+.form input::placeholder{
+    color: #97a7c3;
+}
+.container-weather{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    border-radius: 1rem;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #193566;
+}
+.clima{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.clima .name{
+    box-shadow: 8px 8px 8px #bcbfc2, -8px -8px 8px #fff;
+    padding: .5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    font-size: 2.3rem;
+    letter-spacing: .1rem;
+}
+.clima .name span{
+    text-align: center;
+    display: inline-block;
+    margin: 0 2.3rem;
+}
+
+.clima .tiempo-clima{
+    text-transform: uppercase;
+    box-shadow: 8px 8px 8px #bcbfc2, -8px -8px 8px #fff;
+    padding: .5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.clima .clima-img{
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 2rem;
+}
+.clima .clima-img img{
+    width: 100%;
+    height: 100%;
+}
+.temperatura{
+    text-transform: uppercase;
+    box-shadow: 8px 8px 8px #bcbfc2, -8px -8px 8px #fff;
+    padding: .5rem 2rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
+    font-size: 4rem;
+    font-weight: 600;
+}
+.timezone{
+    position: absolute;
+    bottom: 10%;
+    color: #193566;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 8px 8px 8px #bcbfc2, -8px -8px 8px #fff;
+    padding: .5rem 1rem;
+}
+.dark-mode{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    padding: .8rem;
+    border: none;
+    outline: none;
+    box-shadow: 8px 8px 8px #bcbfc2, -8px -8px 8px #fff;
+    cursor: pointer;
+}
+.dark-mode .fa-moon{
+    color: #193566;
+    font-size: 1.8rem;
+}
+
+.oscuro section{
+    background-color:#1a1b15;
+}
+.oscuro .container{
+    box-shadow: 13px 13px 20px #141411, -13px -13px 20px #000;
+}
+.oscuro .form{
+    box-shadow: 13px 13px 20px #141411, -13px -13px 20px #000;
+}
+.oscuro .form input{
+    background-color: transparent;
+    box-shadow: inset 8px 8px 8px #141411, inset -8px -8px 8px #000;
+    color: #ecf0f3;
+}
+.oscuro .form input::placeholder{
+    color: #ecf0f3;
+}
+.oscuro .clima .name,
+.oscuro .clima .tiempo-clima,
+.oscuro .clima .tiempo-clima,
+.oscuro .temperatura,
+.oscuro .timezone,
+.oscuro .dark-mode,
+.oscuro .research{
+    box-shadow: inset 8px 8px 8px #141411, inset -8px -8px 8px #000;
+    color: #ecf0f3;
+}
+.oscuro .dark-mode,
+.oscuro .research{
+    background-color: transparent;
+}
+.oscuro .dark-mode .fa-moon,
+.oscuro .research .fa-redo{
+    color: #ecf0f3;
+}
+.fa-sun{
+    color: #ecf0f3;
+    font-size: 1.9rem;
+    display: none;
+}
+.oscuro .fa-sun{
+    display: block;
+}
+.oscuro .fa-moon{
+    display: none;
+}
+.oops{
+    font-size: 3rem;
+    color: red;
+}
+.research{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 50%;
+    padding: .8rem;
+    border: none;
+    outline: none;
+    box-shadow: 8px 8px 8px #bcbfc2, -8px -8px 8px #fff;
+    cursor: pointer;
+}
+.research .fa-redo{
+    color: #193566;
+    font-size: 1.8rem;
+}
+.oscuro .research{
+    color: #ecf0f3;
+}
+@media (max-width:900px) {
+    .container{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form{
+        width: 80%;
+    }
+    .form input{
+        width: 90%;
+    }
+    .container-weather{
+        margin-top: 1rem;
+    }
+    .timezone{
+        position: absolute;
+        bottom: 2rem;
+        width: 90%;
+        text-align: center;
+    }
+}
